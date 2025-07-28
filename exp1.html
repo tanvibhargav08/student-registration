@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      margin-top: 5px;
+      padding: 5px;
+      width: 100%;
+      max-width: 400px;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Student Registration Form</h1>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+
+    <!-- Personal Information -->
+    <fieldset>
+      <legend>1. Personal Information</legend>
+
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="Male" required> <label for="male" style="display:inline;">Male</label>
+      <input type="radio" id="female" name="gender" value="Female" required> <label for="female" style="display:inline;">Female</label>
+      <input type="radio" id="other" name="gender" value="Other" required> <label for="other" style="display:inline;">Other</label>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" required>
+
+      <label for="color">Favorite Color:</label>
+      <input type="color" id="color" name="color">
+    </fieldset>
+
+    <!-- Academic Information -->
+    <fieldset>
+      <legend>2. Academic Information</legend>
+
+      <label for="roll">Roll Number:</label>
+      <input type="number" id="roll" name="roll" required>
+
+      <label for="admission">Year of Admission:</label>
+      <input type="number" id="admission" name="admission" required>
+
+      <label for="course">Course / Branch:</label>
+      <select id="course" name="course" required>
+        <option value="">-- Select Course / Branch --</option>
+        <option value="CSE">Computer Science</option>
+        <option value="ECE">Electronics and Communication</option>
+        <option value="ME">Mechanical Engineering</option>
+        <option value="CE">Civil Engineering</option>
+        <option value="EE">Electrical Engineering</option>
+      </select>
+
+      <label for="skills">Rate Your Coding Skills:</label>
+      <input type="range" id="skills" name="skills" min="1" max="10">
+
+      <label for="labTime">Preferred Lab Time:</label>
+      <input type="time" id="labTime" name="labTime">
+
+      <label for="gradMonth">Graduation Month:</label>
+      <input type="month" id="gradMonth" name="gradMonth">
+    </fieldset>
+
+    <!-- Documents Upload -->
+    <fieldset>
+      <legend>3. Documents Upload</legend>
+
+      <label for="photo">Upload Passport Size Photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required>
+
+      <label for="document">Upload Marksheet or ID Proof:</label>
+      <input type="file" id="document" name="document" accept=".pdf,.jpg,.jpeg,.png" required>
+    </fieldset>
+
+    <!-- Additional Info -->
+    <fieldset>
+      <legend>4. Additional Info</legend>
+
+      <label for="website">Personal Website / LinkedIn:</label>
+      <input type="url" id="website" name="website">
+
+      <label for="bio">Bio / About You:</label>
+      <textarea id="bio" name="bio" rows="5"></textarea>
+
+      <input type="hidden" name="studentID" value="123456">
+
+      <label>
+        <input type="checkbox" name="terms" required> Accept Terms & Conditions
+      </label>
+    </fieldset>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+
+  </form>
+
+</body>
+</html>
